@@ -8,7 +8,7 @@
 
 #Cuidado, o programa não entende a linguagem puramente humana
 
-se voce digitar e não simbolizar que é um comentário o programa não vai entender e vai dar erro 
+# se voce digitar e não simbolizar que é um comentário o programa não vai entender e vai dar erro 
 
 # você também pode
 # selecionar várias
