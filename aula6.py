@@ -1,4 +1,4 @@
-# #Criação de uma classe
+#Criação de uma classe
 # class Pessoa:
     
 #     #Definição dos atributos que esse objeto tem
@@ -8,6 +8,13 @@
 
 # #Criando um objeto do tipo Pessoa com nome "Luan" e idade 18
 # pessoa1= Pessoa ("Luan", 18)
+# pessoa2= Pessoa ("Márcio", 61)
+
+# #Acessando atributos (quando não são protegidos (veremos outra forma depois):
+# print(pessoa1.nome)
+# print(pessoa1.idade)
+# print(pessoa2.nome)
+# print(pessoa2.idade)
 
 
 # #Criação da classe mãe
@@ -54,22 +61,55 @@
 
 
 #Criação da classe mãe
+# class Pessoa:
+#     def __init__(self, nome, idade):
+#         self.nome=nome
+#         self.idade=idade
+
+#     def falar (self):
+#         print(f"Olá, meu nome é {self.nome}")
+
+# #Criando classe Brasileiro que herda a classe Pessoa, pois brasileiro É UMA Pessoa
+# class Brasileiro (Pessoa):
+
+#     #Lógica para herdar atributos de Pessoa e adicionar o atributo cpf
+#     def __init__(self, nome, idade, cpf):
+#         super().__init__(nome, idade)
+#         self.cpf= cpf
+
+# pessoa1= Brasileiro ("Márcio", 23, 19584316487)
+# pessoa1.falar()
+
+# class Pessoa:
+#     def __init__(self, nome, idade):
+#         #Atributo privado
+#         self.__nome = nome
+#         self._idade = idade
+    
+# pessoa1= Pessoa("Joana", 26)
+
+# print(pessoa1.__nome)
+# print(pessoa1._idade)
+
+
 class Pessoa:
     def __init__(self, nome, idade):
-        self.nome=nome
-        self.idade=idade
+        self.__nome = nome
+        self._idade = idade
 
-    def falar (self):
-        print(f"Olá, meu nome é {self.nome}")
+    def get_nome (self):
+        return self.__nome
+    
+    def set_nome (self, novo_nome):
+        self.__nome = novo_nome
 
-#Criando classe Brasileiro que herda a classe Pessoa, pois brasileiro É UMA Pessoa
-class Brasileiro (Pessoa):
+    def get_idade(self):
+        return self._idade
+    
+    def set_idade(self, nova_idade):
+        self._idade = nova_idade
 
-    #Lógica para herdar atributos de Pessoa e adicionar o atributo cpf
-    def __init__(self, nome, idade, cpf):
-        super().__init__(nome, idade)
-        self.cpf= cpf
-
-pessoa1= Brasileiro ("Márcio", 23, 19584316487)
-pessoa1.falar()
-
+pessoa1= Pessoa ("Priscila", 26)
+print(pessoa1.get_nome())      #Obtendo o nome através do método get
+pessoa1.set_nome("Raphaela")   #Alterando o nome através do método set
+print(pessoa1.get_nome())      #Obtendo o  novo nome através do método get
