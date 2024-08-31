@@ -91,27 +91,27 @@
 # print(pessoa1._idade)
 
 
-# class Pessoa:
-#     def __init__(self, nome, idade):
-#         self.__nome = nome
-#         self._idade = idade
+# # class Pessoa:
+# #     def __init__(self, nome, idade):
+# #         self.__nome = nome
+# #         self._idade = idade
 
-#     def get_nome (self):
-#         return self.__nome
+# #     def get_nome (self):
+# #         return self.__nome
 
-#     def set_nome (self, novo_nome):
-#         self.__nome = novo_nome
+# #     def set_nome (self, novo_nome):
+# #         self.__nome = novo_nome
 
-#     def get_idade(self):
-#         return self._idade
+# #     def get_idade(self):
+# #         return self._idade
 
-#     def set_idade(self, nova_idade):
-#         self._idade = nova_idade
+# #     def set_idade(self, nova_idade):
+# #         self._idade = nova_idade
 
-# pessoa1= Pessoa ("Priscila", 26)
-# print(pessoa1.get_nome())      #Obtendo o nome através do método get
-# pessoa1.set_nome("Raphaela")   #Alterando o nome através do método set
-# print(pessoa1.get_nome())      #Obtendo o  novo nome através do método get
+# # pessoa1= Pessoa ("Priscila", 26)
+# # print(pessoa1.get_nome())      #Obtendo o nome através do método get
+# # pessoa1.set_nome("Raphaela")   #Alterando o nome através do método set
+# # print(pessoa1.get_nome())      #Obtendo o  novo nome através do método get
 
 
 # from abc import ABC, abstractmethod
@@ -156,16 +156,16 @@ class Retangulo(Forma):
 
 
 # Criando classe Circulo que implementa Forma
-class Circulo(Forma):
-    def __init__(self, raio):
-        self.raio = raio
+# class Circulo(Forma):
+#     def __init__(self, raio):
+#         self.raio = raio
 
-    def calcular_area(self):
-        area = 3.14 * (self.raio**2)
-        return area
+#     def calcular_area(self):
+#         area = 3.14 * (self.raio**2)
+#         return area
 
 
-circulo1 = Circulo(2)
+# circulo1 = Circulo(2)
 retangulo1 = Retangulo(4, 1.3)
-print(circulo1.calcular_area())
-print(retangulo1.calcular_area())
+# print(circulo1.calcular_area())
+# print(retangulo1.calcular_area())
